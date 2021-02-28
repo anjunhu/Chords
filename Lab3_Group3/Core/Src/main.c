@@ -39,6 +39,7 @@
 /* USER CODE BEGIN PM */
 #define MAX_8 255
 #define MAX_12 4095
+//#define PARTONE 1
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -102,6 +103,10 @@ int main(void)
   uint16_t t = 0;
   HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);
   HAL_DAC_Start(&hdac1,DAC_CHANNEL_2);
+  HAL_TIM_Base_Start_IT(&htim2);
+  uint16_t* trip = &tri;
+  uint16_t* sinp = &sin;
+  uint16_t* sawp = &saw;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -109,51 +114,35 @@ int main(void)
   /*** USER CODE BEGIN WHILE ***/
   while (1)
   {
-	  if(!HAL_GPIO_ReadPin(USER_BUTTON_GPIO_Port, USER_BUTTON_Pin)){ // RESET=0U
-		  HAL_Delay(5);
-		  if(HAL_GPIO_ReadPin(USER_BUTTON_GPIO_Port, USER_BUTTON_Pin)){ // SET=1U, a rising edge is detected
-//		  	HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin); // toggle LED mode
-		  	mode = (mode+1)%6;
-		  }
-	  }
-
-
+	#ifdef  PARTONE
 	  switch(mode) {
-
 	     case 0:
-	    	 polled_waves_8bit(&tri, &saw, &sin, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, saw);
+	    	polled_waves_8bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *sawp);
 	        break;
-
 	     case 1:
-	    	 polled_waves_8bit(&tri, &saw, &sin, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, tri);
+	    	 polled_waves_8bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *trip);
 	        break;
-
 	     case 2:
-	    	 polled_waves_8bit(&tri, &saw, &sin, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin);
+	    	 polled_waves_8bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *sinp);
 	        break;
-
-
 	     case 3:
-	    	 polled_waves_12bit(&tri, &saw, &sin, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, saw);
+	    	polled_waves_12bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *sawp);
 	        break;
-
 	     case 4:
-	    	 polled_waves_12bit(&tri, &saw, &sin, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, tri);
+	    	 polled_waves_12bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *trip);
 	        break;
-
 	     case 5:
-	    	 polled_waves_12bit(&tri, &saw, &sin, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sin);
+	    	 polled_waves_12bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *sinp);
 	        break;
-
 	     default:
-	    	 polled_waves_12bit(&tri, &saw, &sin, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sin);
+	    	 polled_waves_12bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *sinp);
 	  }
 
 	  HAL_Delay(1);
@@ -161,6 +150,8 @@ int main(void)
 	  if (t > T){
 		  t = 0;
 	  }
+	#else
+	#endif
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -322,21 +313,37 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(USER_BUTTON_GPIO_Port, USER_BUTTON_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : USER_BUTTON_Pin */
   GPIO_InitStruct.Pin = USER_BUTTON_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(USER_BUTTON_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : LED_GREEN_Pin */
+  GPIO_InitStruct.Pin = LED_GREEN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(USER_BUTTON_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(LED_GREEN_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	if(GPIO_Pin == USER_BUTTON_Pin){
+		HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
+		mode = (mode+1)%6;
+	}
+}
 /* USER CODE END 4 */
 
 /**

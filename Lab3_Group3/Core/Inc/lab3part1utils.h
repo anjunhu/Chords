@@ -36,4 +36,5 @@ void polled_waves_12bit (uint16_t* trip, uint16_t* sawp, uint16_t* sinp, uint16_
 	t += 1;
 }
 
+
 #endif /* INC_LAB3PART1UTILS_H_ */
