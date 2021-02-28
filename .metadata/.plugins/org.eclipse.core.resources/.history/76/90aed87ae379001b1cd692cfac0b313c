@@ -1,0 +1,25 @@
+/*
+ * lab3part1utils.h
+ *
+ *  Created on: Feb. 28, 2021
+ *      Author: ah
+ */
+
+#ifndef INC_LAB3PART1UTILS_H_
+#define INC_LAB3PART1UTILS_H_
+
+void generate_waves_8bit (uint8_t* trip, uint8_t* sawp, uint8_t* sinp, uint8_t t){
+	&sawp = 17*t;
+
+	if (t<=8){
+		&trip = 31*t;
+	}
+	else {
+		&trip = 31*(T-t+1);
+	}
+	t += 1;
+
+	  sin = (uint8_t) (255*(arm_sin_f32(t/T)+1));
+}
+
+#endif /* INC_LAB3PART1UTILS_H_ */
