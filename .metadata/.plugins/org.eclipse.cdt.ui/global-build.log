@@ -668,3 +668,1643 @@ Finished building: Lab3_Group3.bin
 Finished building: Lab3_Group3.list
  
  
+12:35:48 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15908	     20	   1668	  17596	   44bc	Lab3_Group3.elf
+Finished building: default.size.stdout
+Finished building: Lab3_Group3.bin
+ 
+ 
+Finished building: Lab3_Group3.list
+ 
+13:02:35 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:102:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:101:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:100:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10712	     20	   1668	  12400	   3070	Lab3_Group3.elf
+Finished building: default.size.stdout
+Finished building: Lab3_Group3.list
+ 
+ 
+Finished building: Lab3_Group3.bin
+ 
+13:51:43 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:102:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:101:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:100:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:351:5: error: 'GPIO_PIN' undeclared (first use in this function); did you mean 'GPIO_Pin'?
+  if(GPIO_PIN == USER_BUTTON_Pin){
+     ^~~~~~~~
+     GPIO_Pin
+../Core/Src/main.c:351:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:33: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+13:51:54 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:102:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:101:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:100:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10712	     20	   1668	  12400	   3070	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+14:04:42 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:102:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:101:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:100:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10948	     20	   1668	  12636	   315c	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.list
+Finished building: Lab3_Group3.bin
+ 
+ 
+14:05:46 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:102:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:101:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:100:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10856	     20	   1668	  12544	   3100	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+14:09:30 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:102:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:101:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:100:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10848	     20	   1668	  12536	   30f8	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+14:11:08 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10848	     20	   1668	  12536	   30f8	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+14:13:06 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+arm-none-eabi-gcc "../Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.d" -MT"Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:102:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:101:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:100:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o:D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h:58: multiple definition of `SystemCoreClock'
+Core/Src/system_stm32l4xx.o:D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h:58: first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o:(.rodata.AHBPrescTable+0x0): multiple definition of `AHBPrescTable'
+Core/Src/system_stm32l4xx.o:(.rodata.AHBPrescTable+0x0): first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o:(.rodata.APBPrescTable+0x0): multiple definition of `APBPrescTable'
+Core/Src/system_stm32l4xx.o:(.rodata.APBPrescTable+0x0): first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o:(.rodata.MSIRangeTable+0x0): multiple definition of `MSIRangeTable'
+Core/Src/system_stm32l4xx.o:(.rodata.MSIRangeTable+0x0): first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o: In function `SystemInit':
+D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c:181: multiple definition of `SystemInit'
+Core/Src/system_stm32l4xx.o:D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Core/Src/system_stm32l4xx.c:181: first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o: In function `SystemCoreClockUpdate':
+D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c:257: multiple definition of `SystemCoreClockUpdate'
+Core/Src/system_stm32l4xx.o:D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Core/Src/system_stm32l4xx.c:257: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:59: Lab3_Group3.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+14:13:46 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.d" -MT"Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:102:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:101:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:100:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o:D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h:58: multiple definition of `SystemCoreClock'
+Core/Src/system_stm32l4xx.o:D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h:58: first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o:(.rodata.AHBPrescTable+0x0): multiple definition of `AHBPrescTable'
+Core/Src/system_stm32l4xx.o:(.rodata.AHBPrescTable+0x0): first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o:(.rodata.APBPrescTable+0x0): multiple definition of `APBPrescTable'
+Core/Src/system_stm32l4xx.o:(.rodata.APBPrescTable+0x0): first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o:(.rodata.MSIRangeTable+0x0): multiple definition of `MSIRangeTable'
+Core/Src/system_stm32l4xx.o:(.rodata.MSIRangeTable+0x0): first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o: In function `SystemInit':
+D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c:181: multiple definition of `SystemInit'
+Core/Src/system_stm32l4xx.o:D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Core/Src/system_stm32l4xx.c:181: first defined here
+Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.o: In function `SystemCoreClockUpdate':
+D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c:257: multiple definition of `SystemCoreClockUpdate'
+Core/Src/system_stm32l4xx.o:D:/202101/ECSE444/Lab3_Group3/Lab3_Group3/Debug/../Core/Src/system_stm32l4xx.c:257: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:59: Lab3_Group3.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+14:16:10 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:102:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:101:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:100:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10904	     20	   1668	  12592	   3130	Lab3_Group3.elf
+Finished building: default.size.stdout
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+ 
+14:16:56 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10904	     20	   1668	  12592	   3130	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+14:29:14 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:4: warning: implicit declaration of function 'run_part1' [-Wimplicit-function-declaration]
+    run_part1(&tri, &saw, &sin, t, T);
+    ^~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:304:6: warning: conflicting types for 'run_part1'
+ void run_part1(uint16_t* trip, uint16_t* sawp, uint16_t* sinp, uint16_t t, uint16_t T){
+      ^~~~~~~~~
+../Core/Src/main.c:115:4: note: previous implicit declaration of 'run_part1' was here
+    run_part1(&tri, &saw, &sin, t, T);
+    ^~~~~~~~~
+../Core/Src/main.c: In function 'run_part1':
+../Core/Src/main.c:308:63: error: 'saw' undeclared (first use in this function); did you mean 'sawp'?
+       HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, saw);
+                                                               ^~~
+                                                               sawp
+../Core/Src/main.c:308:63: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:312:63: error: 'tri' undeclared (first use in this function); did you mean 'trip'?
+       HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, tri);
+                                                               ^~~
+                                                               trip
+../Core/Src/main.c:316:63: warning: passing argument 4 of 'HAL_DAC_SetValue' makes integer from pointer without a cast [-Wint-conversion]
+       HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin);
+                                                               ^~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:541:19: note: expected 'uint32_t {aka long unsigned int}' but argument is of type '__attribute__((const)) double (*)(double)'
+ HAL_StatusTypeDef HAL_DAC_SetValue(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t Alignment, uint32_t Data);
+                   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:328:64: warning: passing argument 4 of 'HAL_DAC_SetValue' makes integer from pointer without a cast [-Wint-conversion]
+       HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sin);
+                                                                ^~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:541:19: note: expected 'uint32_t {aka long unsigned int}' but argument is of type '__attribute__((const)) double (*)(double)'
+ HAL_StatusTypeDef HAL_DAC_SetValue(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t Alignment, uint32_t Data);
+                   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:332:64: warning: passing argument 4 of 'HAL_DAC_SetValue' makes integer from pointer without a cast [-Wint-conversion]
+       HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sin);
+                                                                ^~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:541:19: note: expected 'uint32_t {aka long unsigned int}' but argument is of type '__attribute__((const)) double (*)(double)'
+ HAL_StatusTypeDef HAL_DAC_SetValue(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t Alignment, uint32_t Data);
+                   ^~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:33: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+14:30:11 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:4: warning: implicit declaration of function 'run_part1' [-Wimplicit-function-declaration]
+    run_part1(&tri, &saw, &sin, t, T);
+    ^~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:304:6: warning: conflicting types for 'run_part1'
+ void run_part1(uint16_t* trip, uint16_t* sawp, uint16_t* sinp, uint16_t t, uint16_t T){
+      ^~~~~~~~~
+../Core/Src/main.c:115:4: note: previous implicit declaration of 'run_part1' was here
+    run_part1(&tri, &saw, &sin, t, T);
+    ^~~~~~~~~
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16088	     20	   1668	  17776	   4570	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.list
+Finished building: Lab3_Group3.bin
+ 
+ 
+14:32:31 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:26:0:
+../Core/Inc/lab3part1utils.h: In function 'run_part1':
+../Core/Inc/lab3part1utils.h:40:11: error: 'mode' undeclared (first use in this function); did you mean 'modf'?
+    switch(mode) {
+           ^~~~
+           modf
+../Core/Inc/lab3part1utils.h:40:11: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Inc/lab3part1utils.h:43:25: error: 'hdac1' undeclared (first use in this function)
+       HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *sawp);
+                         ^~~~~
+make: *** [Core/Src/subdir.mk:33: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+14:33:28 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:4: warning: implicit declaration of function 'run_part1' [-Wimplicit-function-declaration]
+    run_part1(&tri, &saw, &sin, t, T);
+    ^~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:304:6: warning: conflicting types for 'run_part1'
+ void run_part1(uint16_t* trip, uint16_t* sawp, uint16_t* sinp, uint16_t t, uint16_t T){
+      ^~~~~~~~~
+../Core/Src/main.c:115:4: note: previous implicit declaration of 'run_part1' was here
+    run_part1(&tri, &saw, &sin, t, T);
+    ^~~~~~~~~
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16088	     20	   1668	  17776	   4570	Lab3_Group3.elf
+Finished building: default.size.stdout
+Finished building: Lab3_Group3.bin
+ 
+ 
+Finished building: Lab3_Group3.list
+ 
+14:38:40 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:107:3: error: 'trip' undeclared (first use in this function); did you mean 'tri'?
+   trip = &tri;
+   ^~~~
+   tri
+../Core/Src/main.c:107:3: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:108:3: error: 'sinp' undeclared (first use in this function); did you mean 'sin'?
+   sinp = &sin;
+   ^~~~
+   sin
+../Core/Src/main.c:109:3: error: 'sawp' undeclared (first use in this function); did you mean 'saw'?
+   sawp = &saw;
+   ^~~~
+   saw
+make: *** [Core/Src/subdir.mk:33: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+14:39:09 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16056	     20	   1668	  17744	   4550	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+14:41:49 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:4: warning: implicit declaration of function 'run_part1' [-Wimplicit-function-declaration]
+    run_part1(trip, sawp, sinp, t, T);
+    ^~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:308:6: warning: conflicting types for 'run_part1'
+ void run_part1(uint16_t* trip, uint16_t* sawp, uint16_t* sinp, uint16_t t, uint16_t T){
+      ^~~~~~~~~
+../Core/Src/main.c:119:4: note: previous implicit declaration of 'run_part1' was here
+    run_part1(trip, sawp, sinp, t, T);
+    ^~~~~~~~~
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16096	     20	   1668	  17784	   4578	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+14:43:04 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16088	     20	   1668	  17776	   4570	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+14:43:51 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16096	     20	   1668	  17784	   4578	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+14:44:31 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16056	     20	   1668	  17744	   4550	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+14:45:26 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:13: warning: unused variable 'sawp' [-Wunused-variable]
+   uint16_t* sawp = &saw;
+             ^~~~
+../Core/Src/main.c:108:13: warning: unused variable 'sinp' [-Wunused-variable]
+   uint16_t* sinp = &sin;
+             ^~~~
+../Core/Src/main.c:107:13: warning: unused variable 'trip' [-Wunused-variable]
+   uint16_t* trip = &tri;
+             ^~~~
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10956	     20	   1668	  12644	   3164	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+14:46:18 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:13: warning: unused variable 'sawp' [-Wunused-variable]
+   uint16_t* sawp = &saw;
+             ^~~~
+../Core/Src/main.c:108:13: warning: unused variable 'sinp' [-Wunused-variable]
+   uint16_t* sinp = &sin;
+             ^~~~
+../Core/Src/main.c:107:13: warning: unused variable 'trip' [-Wunused-variable]
+   uint16_t* trip = &tri;
+             ^~~~
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     20	   1668	  12652	   316c	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+14:46:29 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     20	   1668	  12652	   316c	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+17:51:03 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:13: warning: unused variable 'sawp' [-Wunused-variable]
+   uint16_t* sawp = &saw;
+             ^~~~
+../Core/Src/main.c:108:13: warning: unused variable 'sinp' [-Wunused-variable]
+   uint16_t* sinp = &sin;
+             ^~~~
+../Core/Src/main.c:107:13: warning: unused variable 'trip' [-Wunused-variable]
+   uint16_t* trip = &tri;
+             ^~~~
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:348:6: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if (htim = &htim2){
+      ^~~~
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10984	     20	   1668	  12672	   3180	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+17:51:33 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:13: warning: unused variable 'sawp' [-Wunused-variable]
+   uint16_t* sawp = &saw;
+             ^~~~
+../Core/Src/main.c:108:13: warning: unused variable 'sinp' [-Wunused-variable]
+   uint16_t* sinp = &sin;
+             ^~~~
+../Core/Src/main.c:107:13: warning: unused variable 'trip' [-Wunused-variable]
+   uint16_t* trip = &tri;
+             ^~~~
+../Core/Src/main.c:103:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:99:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10988	     20	   1668	  12676	   3184	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+21:33:44 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dac_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.d" -MT"Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:108:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:107:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:106:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:105:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:376:4: error: 'sinidx' undeclared (first use in this function); did you mean 'sin_idx'?
+    sinidx = 0;
+    ^~~~~~
+    sin_idx
+../Core/Src/main.c:376:4: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:33: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:34:12 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32l4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32l4xx.d" -MT"Core/Src/system_stm32l4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32l4xx.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:108:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:107:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:106:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:105:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16640	     20	   1812	  18472	   4828	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+21:37:16 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:108:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:107:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:106:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:105:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16592	     20	   1812	  18424	   47f8	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.list
+Finished building: Lab3_Group3.bin
+ 
+ 
+21:38:19 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:111:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:110:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:109:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:108:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16592	     20	   1812	  18424	   47f8	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+21:38:33 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16592	     20	   1812	  18424	   47f8	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+21:40:14 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:111:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:110:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:109:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:108:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16628	     20	   1812	  18460	   481c	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+17:16:13 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:111:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:110:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:109:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:108:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16628	     20	   1812	  18460	   481c	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+17:19:15 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:113:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:112:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:111:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:110:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:109:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16656	     20	   1812	  18488	   4838	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+17:52:03 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:89:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_D6_8b)/sizeof(sin_lookup_D6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:85:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_C6_8b)/sizeof(sin_lookup_C6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:93:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_E6_8b)/sizeof(sin_lookup_E6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:89:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_D6_8b)/sizeof(sin_lookup_D6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:97:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_F6_8b)/sizeof(sin_lookup_F6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:93:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_E6_8b)/sizeof(sin_lookup_E6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:101:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_G6_8b)/sizeof(sin_lookup_G6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:97:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_F6_8b)/sizeof(sin_lookup_F6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:105:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_A6_8b)/sizeof(sin_lookup_A6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:101:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_G6_8b)/sizeof(sin_lookup_G6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:402:48: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+       HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_C6_8b,
+                                                ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:407:48: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+       HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_D6_8b,
+                                                ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:412:48: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+       HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_E6_8b,
+                                                ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:418:42: error: 'sin_lookup_CF6_8b' undeclared (first use in this function); did you mean 'sin_lookup_F6_8b'?
+          sizeof(sin_lookup_F6_8b)/sizeof(sin_lookup_CF6_8b[0]),DAC_ALIGN_8B_R);
+                                          ^~~~~~~~~~~~~~~~~
+                                          sin_lookup_F6_8b
+../Core/Src/main.c:418:42: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:417:49: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+        HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_F6_8b,
+                                                 ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:423:42: error: 'sin_lookup_CG6_8b' undeclared (first use in this function); did you mean 'sin_lookup_CF6_8b'?
+          sizeof(sin_lookup_G6_8b)/sizeof(sin_lookup_CG6_8b[0]),DAC_ALIGN_8B_R);
+                                          ^~~~~~~~~~~~~~~~~
+                                          sin_lookup_CF6_8b
+../Core/Src/main.c:422:49: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+        HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_G6_8b,
+                                                 ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:428:49: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+        HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_A6_8b,
+                                                 ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:433:49: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+        HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_C6_8b,
+                                                 ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:33: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:52:57 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:89:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_D6_8b)/sizeof(sin_lookup_D6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:85:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_C6_8b)/sizeof(sin_lookup_C6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:93:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_E6_8b)/sizeof(sin_lookup_E6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:89:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_D6_8b)/sizeof(sin_lookup_D6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:97:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_F6_8b)/sizeof(sin_lookup_F6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:93:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_E6_8b)/sizeof(sin_lookup_E6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:101:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_G6_8b)/sizeof(sin_lookup_G6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:97:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_F6_8b)/sizeof(sin_lookup_F6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:105:13: error: redefinition of 'lookup_len'
+    uint16_t lookup_len = sizeof(sin_lookup_A6_8b)/sizeof(sin_lookup_A6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:101:13: note: previous definition of 'lookup_len' was here
+    uint16_t lookup_len = sizeof(sin_lookup_G6_8b)/sizeof(sin_lookup_G6_8b[0]);
+             ^~~~~~~~~~
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:402:48: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+       HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_C6_8b,
+                                                ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:407:48: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+       HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_D6_8b,
+                                                ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:412:48: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+       HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_E6_8b,
+                                                ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:417:49: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+        HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_F6_8b,
+                                                 ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:422:49: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+        HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_G6_8b,
+                                                 ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:428:49: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+        HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_A6_8b,
+                                                 ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:433:49: warning: passing argument 3 of 'HAL_DAC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+        HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_C6_8b,
+                                                 ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/stm32l4xx_hal_conf.h:301:0,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dac.h:535:19: note: expected 'uint32_t * {aka long unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ HAL_StatusTypeDef HAL_DAC_Start_DMA(DAC_HandleTypeDef *hdac, uint32_t Channel, uint32_t *pData, uint32_t Length,
+                   ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:33: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:53:49 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18996	     20	   2588	  21604	   5464	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+17:55:00 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18732	     20	   2588	  21340	   535c	Lab3_Group3.elf
+Finished building: default.size.stdout
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+ 
+17:59:09 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18568	     20	   2588	  21176	   52b8	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+17:59:21 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18568	     20	   2588	  21176	   52b8	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+17:59:53 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18596	     20	   2588	  21204	   52d4	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+18:03:05 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:462:64: error: 'sin_lookup_DE6_8b' undeclared (first use in this function); did you mean 'sin_lookup_E6_8b'?
+        HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin_lookup_DE6_8b[sin_idx]);
+                                                                ^~~~~~~~~~~~~~~~~
+                                                                sin_lookup_E6_8b
+../Core/Src/main.c:462:64: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:33: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+18:03:14 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19304	     20	   2588	  21912	   5598	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+Finished building: Lab3_Group3.list
+ 
+ 
+18:06:14 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19384	     20	   2588	  21992	   55e8	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+18:06:51 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19384	     20	   2588	  21992	   55e8	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+21:14:21 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18964	     20	   2628	  21612	   546c	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 
+21:20:32 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
+arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab3_Group3.elf
+ 
+arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
+arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
+arm-none-eabi-size   Lab3_Group3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18428	     20	   2628	  21076	   5254	Lab3_Group3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab3_Group3.bin
+ 
+Finished building: Lab3_Group3.list
+ 

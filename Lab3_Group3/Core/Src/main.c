@@ -40,10 +40,12 @@
 #define MAX_8 255
 #define MAX_12 4095
 //#define PARTONE 1
+//#define PARTTWO_TIMER 2
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
 DAC_HandleTypeDef hdac1;
+DMA_HandleTypeDef hdma_dac1_ch1;
 
 TIM_HandleTypeDef htim2;
 
@@ -54,6 +56,7 @@ TIM_HandleTypeDef htim2;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_DAC1_Init(void);
 static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
@@ -63,6 +66,13 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint8_t mode = 0;
+uint8_t sin_idx = 0;
+uint32_t sin_lookup_C6_8b[46]; // 1046.5 Hz, sample rate = 48kHz
+uint32_t sin_lookup_D6_8b[41]; // 1174.66 Hz,
+uint32_t sin_lookup_E6_8b[36]; // 1318.51 Hz,
+uint32_t sin_lookup_F6_8b[34]; // 1396.91 Hz,
+uint32_t sin_lookup_G6_8b[31]; // 1567.98 Hz,
+uint32_t sin_lookup_A6_8b[27]; // 1760.00 Hz,
 /* USER CODE END 0 */
 
 /**
@@ -72,7 +82,30 @@ uint8_t mode = 0;
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	  uint8_t lookup_len = sizeof(sin_lookup_C6_8b)/sizeof(sin_lookup_C6_8b[0]);
+	  for (int i = 0; i < lookup_len; i++){
+	  	 sin_lookup_C6_8b[i] = (uint8_t) (128*2/3*(arm_sin_f32(6.283*i/lookup_len)+1));
+	  }
+	  lookup_len = sizeof(sin_lookup_D6_8b)/sizeof(sin_lookup_D6_8b[0]);
+	  for (int i = 0; i < lookup_len; i++){
+	  	 sin_lookup_D6_8b[i] = (uint8_t) (128*2/3*(arm_sin_f32(6.283*i/lookup_len)+1));
+	  }
+	  lookup_len = sizeof(sin_lookup_E6_8b)/sizeof(sin_lookup_E6_8b[0]);
+	  for (int i = 0; i < lookup_len; i++){
+	  	 sin_lookup_E6_8b[i] = (uint8_t) (128*2/3*(arm_sin_f32(6.283*i/lookup_len)+1));
+	  }
+	  lookup_len = sizeof(sin_lookup_F6_8b)/sizeof(sin_lookup_F6_8b[0]);
+	  for (int i = 0; i < lookup_len; i++){
+	  	 sin_lookup_F6_8b[i] = (uint8_t) (128*2/3*(arm_sin_f32(6.283*i/lookup_len)+1));
+	  }
+	  lookup_len = sizeof(sin_lookup_G6_8b)/sizeof(sin_lookup_G6_8b[0]);
+	  for (int i = 0; i < lookup_len; i++){
+	  	 sin_lookup_G6_8b[i] = (uint8_t) (128*2/3*(arm_sin_f32(6.283*i/lookup_len)+1));
+	  }
+	  lookup_len = sizeof(sin_lookup_A6_8b)/sizeof(sin_lookup_A6_8b[0]);
+	  for (int i = 0; i < lookup_len; i++){
+	  	 sin_lookup_A6_8b[i] = (uint8_t) (128*2/3*(arm_sin_f32(6.283*i/lookup_len)+1));
+	  }
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -93,6 +126,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_DAC1_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
@@ -101,12 +135,15 @@ int main(void)
   uint16_t tri = 0;
   uint16_t sin = 0;
   uint16_t t = 0;
-  HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);
+#ifdef PARTONE
   HAL_DAC_Start(&hdac1,DAC_CHANNEL_2);
+#elif PARTTWO_TIMER
+  HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);
   HAL_TIM_Base_Start_IT(&htim2);
-  uint16_t* trip = &tri;
-  uint16_t* sinp = &sin;
-  uint16_t* sawp = &saw;
+#else
+  HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_C6_8b,
+  	    			sizeof(sin_lookup_C6_8b)/sizeof(sin_lookup_C6_8b[0]),DAC_ALIGN_8B_R);
+#endif
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -150,7 +187,6 @@ int main(void)
 	  if (t > T){
 		  t = 0;
 	  }
-	#else
 	#endif
     /* USER CODE END WHILE */
 
@@ -234,7 +270,7 @@ static void MX_DAC1_Init(void)
   /** DAC channel OUT1 config
   */
   sConfig.DAC_SampleAndHold = DAC_SAMPLEANDHOLD_DISABLE;
-  sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
+  sConfig.DAC_Trigger = DAC_TRIGGER_T2_TRGO;
   sConfig.DAC_HighFrequency = DAC_HIGH_FREQUENCY_INTERFACE_MODE_DISABLE;
   sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
   sConfig.DAC_ConnectOnChipPeripheral = DAC_CHIPCONNECT_DISABLE;
@@ -251,7 +287,13 @@ static void MX_DAC1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN DAC1_Init 2 */
-
+#ifdef PARTTWO_TIMER
+  sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
+  if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+#endif
   /* USER CODE END DAC1_Init 2 */
 
 }
@@ -277,7 +319,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 2721;
+  htim2.Init.Period = 2500;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -298,6 +340,23 @@ static void MX_TIM2_Init(void)
   /* USER CODE BEGIN TIM2_Init 2 */
 
   /* USER CODE END TIM2_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMAMUX1_CLK_ENABLE();
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
 
 }
 
@@ -343,7 +402,105 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 		HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
 		mode = (mode+1)%6;
 	}
+	switch(mode) {
+	     case 0:
+	    	HAL_DAC_Stop_DMA(&hdac1, DAC_CHANNEL_1);
+	    	HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_C6_8b,
+	    			sizeof(sin_lookup_C6_8b)/sizeof(sin_lookup_C6_8b[0]),DAC_ALIGN_8B_R);
+	        break;
+	     case 1:
+	    	HAL_DAC_Stop_DMA(&hdac1, DAC_CHANNEL_1);
+	    	HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_D6_8b,
+	    			sizeof(sin_lookup_D6_8b)/sizeof(sin_lookup_D6_8b[0]),DAC_ALIGN_8B_R);
+	        break;
+	     case 2:
+	    	HAL_DAC_Stop_DMA(&hdac1, DAC_CHANNEL_1);
+	    	HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_E6_8b,
+	    			sizeof(sin_lookup_E6_8b)/sizeof(sin_lookup_E6_8b[0]),DAC_ALIGN_8B_R);
+	        break;
+	     case 3:
+	    	 HAL_DAC_Stop_DMA(&hdac1, DAC_CHANNEL_1);
+	    	 HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_F6_8b,
+		    			sizeof(sin_lookup_F6_8b)/sizeof(sin_lookup_F6_8b[0]),DAC_ALIGN_8B_R);
+	        break;
+	     case 4:
+	    	 HAL_DAC_Stop_DMA(&hdac1, DAC_CHANNEL_1);
+	    	 HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_G6_8b,
+		    			sizeof(sin_lookup_G6_8b)/sizeof(sin_lookup_G6_8b[0]),DAC_ALIGN_8B_R);
+
+	        break;
+	     case 5:
+	    	 HAL_DAC_Stop_DMA(&hdac1, DAC_CHANNEL_1);
+	    	 HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_A6_8b,
+		    			sizeof(sin_lookup_A6_8b)/sizeof(sin_lookup_A6_8b[0]),DAC_ALIGN_8B_R);
+	        break;
+	     default:
+	    	 HAL_DAC_Stop_DMA(&hdac1, DAC_CHANNEL_1);
+	    	 HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_C6_8b,
+		    			sizeof(sin_lookup_C6_8b)/sizeof(sin_lookup_C6_8b[0]),DAC_ALIGN_8B_R);
+	  }
+
 }
+
+#ifdef PARTTWO_TIMER
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	if (htim == &htim2){
+		switch(mode) {
+		     case 0:
+		 		HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin_lookup_C6_8b[sin_idx]);
+		 		sin_idx++;
+		 		if (sin_idx == sizeof(sin_lookup_C6_8b)/sizeof(sin_lookup_C6_8b[0])){
+		 			sin_idx = 0;
+		 		}
+		        break;
+		     case 1:
+		 		HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin_lookup_D6_8b[sin_idx]);
+		 		sin_idx++;
+		 		if (sin_idx == sizeof(sin_lookup_D6_8b)/sizeof(sin_lookup_D6_8b[0])){
+		 			sin_idx = 0;
+		 		}
+		        break;
+		     case 2:
+		    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin_lookup_E6_8b[sin_idx]);
+		 		sin_idx++;
+		 		if (sin_idx == sizeof(sin_lookup_E6_8b)/sizeof(sin_lookup_E6_8b[0])){
+		 			sin_idx = 0;
+		 		}
+
+		        break;
+		     case 3:
+		    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin_lookup_F6_8b[sin_idx]);
+		 		sin_idx++;
+		 		if (sin_idx == sizeof(sin_lookup_F6_8b)/sizeof(sin_lookup_F6_8b[0])){
+		 			sin_idx = 0;
+		 		}
+		 		break;
+		     case 4:
+		    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin_lookup_G6_8b[sin_idx]);
+		 		sin_idx++;
+		 		if (sin_idx == sizeof(sin_lookup_G6_8b)/sizeof(sin_lookup_G6_8b[0])){
+		 			sin_idx = 0;
+		 		}
+		        break;
+		     case 5:
+		    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin_lookup_A6_8b[sin_idx]);
+		 		sin_idx++;
+		 		if (sin_idx == sizeof(sin_lookup_A6_8b)/sizeof(sin_lookup_A6_8b[0])){
+		 			sin_idx = 0;
+		 		}
+		 		break;
+		     default:
+		    	 HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin_lookup_C6_8b[sin_idx]);
+		 		sin_idx++;
+		 		if (sin_idx == sizeof(sin_lookup_C6_8b)/sizeof(sin_lookup_C6_8b[0])){
+		 			sin_idx = 0;
+		 		}
+		}
+
+	}
+
+}
+#endif
 /* USER CODE END 4 */
 
 /**

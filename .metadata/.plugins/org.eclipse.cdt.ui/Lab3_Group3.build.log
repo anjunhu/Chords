@@ -1,6 +1,22 @@
-12:10:30 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
+21:20:32 **** Incremental Build of configuration Debug for project Lab3_Group3 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32L4S5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:137:12: warning: unused variable 't' [-Wunused-variable]
+   uint16_t t = 0;
+            ^
+../Core/Src/main.c:136:12: warning: unused variable 'sin' [-Wunused-variable]
+   uint16_t sin = 0;
+            ^~~
+../Core/Src/main.c:135:12: warning: unused variable 'tri' [-Wunused-variable]
+   uint16_t tri = 0;
+            ^~~
+../Core/Src/main.c:134:12: warning: unused variable 'saw' [-Wunused-variable]
+   uint16_t saw = 0;
+            ^~~
+../Core/Src/main.c:133:12: warning: unused variable 'T' [-Wunused-variable]
+   uint16_t T = 15; // f = 65 Hz, note C2
+            ^
 arm-none-eabi-gcc -o "Lab3_Group3.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab3_Group3.map" -Wl,--gc-sections -static -L"D:\202101\ECSE444\Lab3_Group3\Lab3_Group3\Core\Lib" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Lab3_Group3.elf
  
@@ -8,13 +24,13 @@ arm-none-eabi-objdump -h -S  Lab3_Group3.elf  > "Lab3_Group3.list"
 arm-none-eabi-objcopy  -O binary  Lab3_Group3.elf  "Lab3_Group3.bin"
 arm-none-eabi-size   Lab3_Group3.elf 
    text	   data	    bss	    dec	    hex	filename
-  15908	     20	   1668	  17596	   44bc	Lab3_Group3.elf
+  18428	     20	   2628	  21076	   5254	Lab3_Group3.elf
 Finished building: default.size.stdout
  
 Finished building: Lab3_Group3.bin
+ 
 Finished building: Lab3_Group3.list
  
- 
 
-12:10:32 Build Finished. 0 errors, 0 warnings. (took 2s.432ms)
+21:20:35 Build Finished. 0 errors, 5 warnings. (took 2s.785ms)
 

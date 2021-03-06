@@ -1,0 +1,77 @@
+/*
+ * lab3part1utils.h
+ *
+ *  Created on: Feb. 28, 2021
+ *      Author: ah
+ */
+
+#ifndef INC_LAB3PART1UTILS_H_
+#define INC_LAB3PART1UTILS_H_
+
+void polled_waves_8bit (uint16_t* trip, uint16_t* sawp, uint16_t* sinp, uint16_t t, uint16_t T){
+	*sawp = 17*t;
+
+	if (t<=8){
+		*trip = 31*t;
+	}
+	else {
+		*trip = 31*(T-t+1);
+	}
+
+	*sinp = (uint16_t) (128*(arm_sin_f32(6.283*t/T)+1));
+	t += 1;
+}
+
+void polled_waves_12bit (uint16_t* trip, uint16_t* sawp, uint16_t* sinp, uint16_t t, uint16_t T){
+	*sawp = 273*t;
+
+	if (t<=8){
+		*trip = 545*t;
+	}
+	else {
+		*trip = 545*(T-t+1);
+	}
+
+	*sinp = (uint16_t) (2048*(arm_sin_f32(6.283*t/T)+1));
+	t += 1;
+}
+
+void run_part1(uint16_t* trip, uint16_t* sawp, uint16_t* sinp, uint16_t t, uint16_t T){
+	  switch(mode) {
+	     case 0:
+	    	polled_waves_8bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *sawp);
+	        break;
+	     case 1:
+	    	 polled_waves_8bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *trip);
+	        break;
+	     case 2:
+	    	 polled_waves_8bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *sinp);
+	        break;
+	     case 3:
+	    	polled_waves_12bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *sawp);
+	        break;
+	     case 4:
+	    	 polled_waves_12bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *trip);
+	        break;
+	     case 5:
+	    	 polled_waves_12bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *sinp);
+	        break;
+	     default:
+	    	 polled_waves_12bit(trip, sawp, sinp, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *sinp);
+	  }
+
+	  HAL_Delay(1);
+	  t++;
+	  if (t > T){
+		  t = 0;
+	  }
+}
+
+#endif /* INC_LAB3PART1UTILS_H_ */
