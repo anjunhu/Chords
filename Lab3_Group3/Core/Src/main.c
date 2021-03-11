@@ -39,7 +39,7 @@
 /* USER CODE BEGIN PM */
 #define MAX_8 255
 #define MAX_12 4095
-//#define PARTONE 1
+#define PARTONE 1
 //#define PARTTWO_TIMER 2
 /* USER CODE END PM */
 
@@ -135,12 +135,14 @@ int main(void)
   uint16_t tri = 0;
   uint16_t sin = 0;
   uint16_t t = 0;
-#ifdef PARTONE
+#if PARTONE
+  HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);
   HAL_DAC_Start(&hdac1,DAC_CHANNEL_2);
 #elif PARTTWO_TIMER
   HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);
   HAL_TIM_Base_Start_IT(&htim2);
 #else
+  HAL_DAC_Start(&hdac1,DAC_CHANNEL_1);
   HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, sin_lookup_C6_8b,
   	    			sizeof(sin_lookup_C6_8b)/sizeof(sin_lookup_C6_8b[0]),DAC_ALIGN_8B_R);
 #endif
@@ -154,32 +156,32 @@ int main(void)
 	#ifdef  PARTONE
 	  switch(mode) {
 	     case 0:
-	    	polled_waves_8bit(trip, sawp, sinp, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *sawp);
+	    	polled_waves_8bit(&tri, &saw, &sin, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, saw);
 	        break;
 	     case 1:
-	    	 polled_waves_8bit(trip, sawp, sinp, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *trip);
+	    	polled_waves_8bit(&tri, &saw, &sin, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, tri);
 	        break;
 	     case 2:
-	    	 polled_waves_8bit(trip, sawp, sinp, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, *sinp);
+	    	 polled_waves_8bit(&tri, &saw, &sin, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sin);
 	        break;
 	     case 3:
-	    	polled_waves_12bit(trip, sawp, sinp, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *sawp);
+	    	polled_waves_12bit(&tri, &saw, &sin, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, saw);
 	        break;
 	     case 4:
-	    	 polled_waves_12bit(trip, sawp, sinp, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *trip);
+	    	 polled_waves_12bit(&tri, &saw, &sin, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, tri);
 	        break;
 	     case 5:
-	    	 polled_waves_12bit(trip, sawp, sinp, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *sinp);
+	    	 polled_waves_12bit(&tri, &saw, &sin, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sin);
 	        break;
 	     default:
-	    	 polled_waves_12bit(trip, sawp, sinp, t, T);
-	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, *sinp);
+	    	 polled_waves_12bit(&tri, &saw, &sin, t, T);
+	    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, sin);
 	  }
 
 	  HAL_Delay(1);
@@ -287,7 +289,7 @@ static void MX_DAC1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN DAC1_Init 2 */
-#ifdef PARTTWO_TIMER
+#if PARTTWO_TIMER || PARTONE
   sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
   if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_1) != HAL_OK)
   {
